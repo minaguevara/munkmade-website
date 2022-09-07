@@ -486,7 +486,7 @@ div > .welcome-text {
     }
 
     .about h1, .pricing h1, .contact h1 {
-        padding-top: 1rem;
+        padding-top: 1.5rem;
     }
 
     .about-container, .contact-container {
