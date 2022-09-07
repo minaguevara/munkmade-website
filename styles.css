@@ -321,7 +321,7 @@ div > .welcome-text {
     }
 
     nav {
-        padding: 0 5px;
+        padding: 2px 5px;
         width: auto;
     }
 
@@ -333,7 +333,7 @@ div > .welcome-text {
     /*     HEADER     */
     .right-nav > a > img {
         width: auto;
-        height: 20px;
+        height: 30px;
         padding-left: 1rem;
     }
 
