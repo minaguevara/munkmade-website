@@ -316,7 +316,7 @@ div > .welcome-text {
     }
 
     nav {
-        padding: 1rem;
+        padding: 0 5px;
         width: auto;
     }
 
@@ -327,7 +327,7 @@ div > .welcome-text {
     /*------------------------CLASSES-----------------------*/
     /*     HEADER     */
     .right-nav > img {
-        height: 25px;
+        height: 20px;
         width: auto;
     }
 
@@ -374,6 +374,10 @@ div > .welcome-text {
     .services {
         padding: 1rem;
     } 
+
+    .services h1 {
+        padding-bottom: 1.5rem;
+    }
 
     .services-cards {
         display: flex;
