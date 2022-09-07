@@ -338,6 +338,8 @@ div > .welcome-text {
     /*     WELCOME     */
     .welcome {
         padding-top: 4rem;
+        padding-left: 10px;
+        padding-right: 10px;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
