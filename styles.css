@@ -48,6 +48,11 @@ span {
 
 /*-----------------------------CLASSES----------------------------*/
 /*     HEADER     */
+.right-nav > a > img {
+    width: auto;
+    height: 40px;
+}
+
 .left-nav ul {
     display: flex;
     flex-direction: row;
@@ -326,13 +331,14 @@ div > .welcome-text {
 
     /*------------------------CLASSES-----------------------*/
     /*     HEADER     */
-    .right-nav > img {
-        height: 20px;
+    .right-nav > a > img {
         width: auto;
+        height: 20px;
     }
 
     .left-nav ul {
         gap: 1rem;
+        font-size: 10px;
     }
 
     /*     WELCOME     */
