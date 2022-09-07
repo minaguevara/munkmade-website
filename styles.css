@@ -1,0 +1,503 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Mulish', sans-serif;
+font-family: 'Silkscreen', cursive; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: transparent;
+    position: fixed;
+    font-weight: 800;
+    width: 100%;
+    background-color: #121212;
+}
+
+body {
+    background-image: url(/img/bg-texture-munkmade.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+}
+
+footer {
+    background-color: whitesmoke;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+span {
+    text-align: justify;
+}
+
+/*-----------------------------CLASSES----------------------------*/
+/*     HEADER     */
+.left-nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+    text-transform:uppercase;
+}
+
+.left-nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    position: relative;
+}
+
+.left-nav ul li a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2em;
+    width: 0%;
+    opacity: 0.8;
+    background-color: #F28C1D;
+    bottom: -.5em;
+    transition: all ease-in-out 250ms;
+    z-index: -1;
+}
+
+.left-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/*     WELCOME BANNER     */
+.welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.welcome > img {
+    margin-left: 10rem;
+}
+
+div > .welcome-text {
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 5rem 0 0 5rem;
+}
+
+.welcome h1 {
+    color: white;
+    font-family: 'Silkscreen', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 90px;
+    text-align: right;
+    padding-right: 10rem;
+}
+
+.welcome h5 {
+    color: gray;
+    font-family: 'Silkscreen', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 10rem;
+}
+
+/*     SERVICES     */
+.services {
+    padding: 3rem 5rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.services-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.service-card {
+    width: 560px;
+    height: 560px;
+}
+
+.service-cards > h2, .service-cards >h3 {
+    display: none;
+}
+
+.service-card  > a > img{
+    border-radius: 30px;
+}
+
+.service-card  > a > img:hover{
+    filter: blur(2px);
+    opacity: 0.5;
+}
+
+/*     ABOUT     */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0;
+}
+
+.about-container {
+    text-align:left ;
+    grid-template-rows: 1fr;
+}
+
+.about-container > span{
+    color: white;
+    margin-left: 5rem;
+    align-self: center;
+    padding-bottom: 1rem;
+}
+
+/*     PRICING     */
+.pricing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    text-align:right;
+    grid-template-rows: 1fr;
+}
+
+.pricing-container > span{
+    color: white;
+    margin-right: 5rem;
+    margin-left: -10px;
+    align-self: center;
+    padding-bottom: 1rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.pricing-container > span > p {
+    line-height: 2;
+    text-align:end;
+}
+
+.pricing-container > span > p > a {
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+}
+
+.pricing-container > span > p > a:hover {
+    color: #F28C1D;
+}
+
+.pricing-container > span > p > .price {
+    padding-left: 1rem;
+    text-align: justify;
+    color: gray;
+}
+
+.pricing-container > span > p > .note {
+    line-height: 0;
+    text-align: start;
+    color: gray;
+    font-size: 12px;
+}
+
+.pricing-container img {
+    align-self: flex-end;
+}
+
+/*     CONTACT     */
+.contact h1 {
+    font-family: 'Silkscreen', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    padding-bottom: 0;
+    text-shadow: 3px 3px 5px #F28C1D;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0;
+}
+
+.contact-icons {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    column-gap: 50px;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    margin-left: 0;
+}
+
+.contact-container > img {
+    margin-left: 0;
+    margin-top: -4rem;
+    z-index: -1;
+}
+
+/*     SERVICES, ABOUT, PRICING, CONTACT     */
+.services h1, .about h1, .pricing h1 {
+    font-family: 'Silkscreen', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    padding-bottom: 2rem;
+    text-shadow: 3px 3px 5px #F28C1D;
+}
+
+.about h1, .pricing h1, .contact h1 {
+    padding-top: 3rem;
+}
+
+.about, .pricing {
+    border-bottom: 2px solid white;
+}
+
+.about-container > img, .pricing-container > img {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/*     FOOTER     */
+.main-footer {
+    padding: 2rem 2rem 4rem 2rem;
+    display: grid;
+    grid-template-columns: 50% 15%;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.main-footer > span {
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family:'Silkscreen', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subfooter {
+    padding: 0 0 2rem 0;
+    color: grey;
+    font-size: small;
+    text-align: center;
+}
+
+.subfooter > p {
+    padding-top: 1rem;
+} 
+
+
+
+
+/*--------------------------------------------MEDIA SCREEN--------------------------------------------*/
+@media screen and (max-width: 800px){
+
+    header {
+        font-weight: 200;
+        font-size: small;
+    }
+
+    nav {
+        padding: 1rem;
+        width: auto;
+    }
+
+    section {
+        width: 100vw;
+    }
+
+    /*------------------------CLASSES-----------------------*/
+    /*     HEADER     */
+    .right-nav > img {
+        height: 25px;
+        width: auto;
+    }
+
+    .left-nav ul {
+        gap: 1rem;
+    }
+
+    /*     WELCOME     */
+    .welcome {
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome > img {
+        margin-left: 0;
+        height: 15rem;
+        width: auto;
+    }
+
+    div > .welcome-text {
+        padding: 0;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+        text-align: center;
+        padding-right: 0;
+        
+    }
+    
+    .welcome h5 {
+        font-size: 15px;
+        text-align: center;
+        padding-right: 0;
+        justify-self: center;
+    }
+
+    /*     SERVICES     */   
+    .services {
+        padding: 1rem;
+    } 
+
+    .services-cards {
+        display: flex;
+    }
+
+    .service-card {
+        width: 140px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-card  > a > img{
+        width: auto;
+        height: 140px;
+        border-radius: 10px;
+    }
+
+    /*     ABOUT     */  
+    .about-container {
+        text-align: center;
+    }
+
+    .about-container > img {
+        margin-left: 0;
+        margin-top: 0;
+        width: 20rem;
+        height: auto;
+        align-self: center;
+    }    
+
+    /*     PRICING     */      
+    .pricing-container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .pricing {
+        text-align: center;
+    }
+
+    .pricing-container > img {
+        margin-left: 0;
+        margin-top: 0;
+        width: 20rem;
+        height: auto;
+        align-self: flex-start;
+    }
+
+    .pricing-container > span > p {
+        text-align:end;
+        padding-right: 5.5rem;
+    }
+
+    .pricing-container > span > p > .note {
+        font-size: 8px;
+    }
+    
+
+    /*     CONTACT     */      
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 3rem; 
+    }
+
+    .contact-container > img {
+        display: none;
+    }
+
+    .contact-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        justify-content:safe;
+        align-items: center;
+        align-content: center;
+        padding-bottom: 1rem;
+        width: fit-content; 
+        margin: 0;
+        column-gap: normal;
+    }
+
+    .contact-icons > a > img {
+        width: 4rem;
+        height: auto;
+    }
+
+    /*     SERVICES, ABOUT, PRICING, CONTACT      */
+    .services h1, .about h1, .pricing h1, .contact h1 {
+        font-size: 20px;
+        padding-bottom: 1rem;
+    }
+
+    .about h1, .pricing h1, .contact h1 {
+        padding-top: 1rem;
+    }
+
+    .about-container, .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .about-container > span, .pricing-container > span, .about-container > span {
+        margin: auto 1rem;
+        align-self: center;
+        font-size: 10px;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+    
+    /*     FOOTER     */
+    .main-footer {
+        padding: 1rem 1rem 2rem 1rem;
+        grid-template-columns: 50% 10%;
+    }
+
+    .main-footer > span {
+        text-align:left;
+        font-weight: 300;
+    }
+
+}
