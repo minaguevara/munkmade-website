@@ -471,6 +471,7 @@ div > .welcome-text {
     .services h1, .about h1, .pricing h1, .contact h1 {
         font-size: 20px;
         padding-bottom: 1rem;
+        text-shadow: 1px 1px 3px #F28C1D;
     }
 
     .about h1, .pricing h1, .contact h1 {
