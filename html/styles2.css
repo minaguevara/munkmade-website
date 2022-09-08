@@ -18,7 +18,7 @@ header {
 
 body {
     background-image: url(/img/bg-texture-munkmade.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-color: black;
 }
