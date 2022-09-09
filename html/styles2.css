@@ -666,7 +666,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-
+/*-------------------------------------------------MEDIA SCREEN / tablet-------------------------------------------------*/
 @media only screen 
 and (min-device-width: 834px) 
 and (max-device-width: 1112px)
@@ -676,7 +676,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 60px;
         padding-top: 4rem;
     }
-
 
     /*     CONTAINER 1    */
     .container {
@@ -728,6 +727,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+/*-------------------------------------------------MEDIA SCREEN / tablet-------------------------------------------------*/
 @media only screen 
 and (min-device-width: 1024px) 
 and (max-device-width: 1366px)
@@ -737,7 +737,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 60px;
         padding-top: 4rem;
     }
-
 
     /*     CONTAINER 1    */
     .container {
@@ -758,7 +757,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 25px;
         text-align: justify;
         padding: 0;
-
     }
 
     .container-title > h1{
