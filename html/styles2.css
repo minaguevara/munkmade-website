@@ -660,7 +660,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
             max-width: 100%;
             object-fit: contain;
             overflow: hidden;
-            position: relative;
+            align-self: flex-start;
         }
 }
 
@@ -720,7 +720,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         object-fit: contain;
         overflow: hidden;
         align-items: flex-start;
-        position: relative;
+        align-self: flex-start;
     }
 }
 
@@ -779,6 +779,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
-        position: relative;
+        align-self: flex-start;
     }
 }
