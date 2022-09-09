@@ -656,6 +656,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     
         .gallery > img {
             border: 1.5px solid white;
+            width:fit-content;
+            height: auto;
         }
 }
 
@@ -711,6 +713,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .gallery > img {
         border: 1.5px solid white;
+        width:fit-content;
+        height: auto;
     }
 }
 
