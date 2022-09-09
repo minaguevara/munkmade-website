@@ -645,23 +645,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
             font-size: 60px;
         }
     
-        /*     GALLERY 1    */
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            justify-items: center;
-            justify-content: center;
-            align-items: flex-start;
-        }
-    
-        .gallery > img {
-            border: 1.5px solid white;
-            max-width: 100%;
-            object-fit: contain;
-            overflow: hidden;
-            align-self: flex-start;
-        }
+    /*     GALLERY 1    */
+    .gallery {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+        justify-items: center;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: space-around;
+    }
+
+    .gallery > img {
+        border: 1.5px solid white;
+        max-width: 100%;
+        object-fit: contain;
+        overflow: hidden;
+        align-items: flex-start;
+        align-self: flex-start;
+    }
 }
 
 
@@ -708,10 +710,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     /*     GALLERY 1    */
     .gallery {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
         justify-items: center;
         justify-content: center;
+        align-items: flex-start;
+        align-content: space-around;
     }
 
     .gallery > img {
@@ -767,11 +771,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     /*     GALLERY 1    */
     .gallery {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
         justify-items: center;
         justify-content: center;
         align-items: flex-start;
+        align-content: space-around;
     }
 
     .gallery > img {
@@ -779,6 +784,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
+        align-items: flex-start;
         align-self: flex-start;
     }
 }
