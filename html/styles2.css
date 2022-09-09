@@ -660,6 +660,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
             max-width: 100%;
             object-fit: contain;
             overflow: hidden;
+            position: relative;
         }
 }
 
@@ -719,6 +720,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         object-fit: contain;
         overflow: hidden;
         align-items: flex-start;
+        position: relative;
     }
 }
 
@@ -770,7 +772,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         justify-items: center;
         justify-content: center;
         align-items: flex-start;
-        position: relative;
     }
 
     .gallery > img {
@@ -778,5 +779,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
+        position: relative;
     }
 }
