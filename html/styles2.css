@@ -603,3 +603,55 @@ footer {
         font-weight: 300;
     }
 }
+
+/*-------------------------------------------------MEDIA SCREEN-------------------------------------------------*/
+@media screen and (min-width:321px) and (max-width:768px) {
+        /*     CONTAINER 1    */
+        .title > h1{
+            font-size: 40px;
+            padding-top: 4rem;
+        }
+    
+    
+        /*     CONTAINER 1    */
+        .container {
+            padding: 0 2rem 1rem 2rem;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .container > .text {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            align-items: center;
+        }
+    
+        .container > .text > p {
+            font-size: 15px;
+            text-align: justify;
+            padding: 0;
+    
+        }
+    
+        .container-title > h1{
+            padding-top: 4rem;
+            padding-bottom: 1rem;
+            text-align: center;
+            font-size: 40px;
+        }
+    
+        /*     GALLERY 1    */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-items: center;
+            justify-content: center;
+        }
+    
+        .gallery > img {
+            border: 1.5px solid white;
+        }
+}
