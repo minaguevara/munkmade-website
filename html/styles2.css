@@ -652,6 +652,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
             grid-template-rows: 1fr 1fr 1fr;
             justify-items: center;
             justify-content: center;
+            align-items: flex-start;
         }
     
         .gallery > img {
@@ -717,6 +718,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         max-width: 100%;
         object-fit: contain;
         overflow: hidden;
+        align-items: flex-start;
     }
 }
 
@@ -767,6 +769,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         grid-template-rows: 1fr 1fr 1fr;
         justify-items: center;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .gallery > img {
