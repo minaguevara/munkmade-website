@@ -621,12 +621,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
             padding: 0 2rem 1rem 2rem;
             display: flex;
             flex-direction: column-reverse;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
         }
     
         .container > .text {
-            padding-top: 1rem;
+            padding-top: 3rem;
             padding-bottom: 2rem;
             align-items: center;
         }
@@ -680,12 +680,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding: 0 2rem 1rem 2rem;
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
     }
 
     .container > .text {
-        padding-top: 1rem;
+        padding-top: 3rem;
         padding-bottom: 2rem;
         align-items: center;
     }
@@ -738,12 +738,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding: 0 2rem 1rem 2rem;
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
     }
 
     .container > .text {
-        padding-top: 1rem;
+        padding-top: 3rem;
         padding-bottom: 2rem;
         align-items: center;
     }
