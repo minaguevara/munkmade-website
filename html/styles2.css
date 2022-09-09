@@ -622,7 +622,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
             display: flex;
             flex-direction: column-reverse;
             justify-content: flex-end;
-            align-items: center;
+            align-items: flex-start;
         }
     
         .container > .text {
@@ -681,7 +681,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .container > .text {
@@ -739,7 +739,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .container > .text {
@@ -770,6 +770,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         justify-items: center;
         justify-content: center;
         align-items: flex-start;
+        position: relative;
     }
 
     .gallery > img {
