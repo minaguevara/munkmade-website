@@ -281,6 +281,20 @@ div > .welcome-text {
     margin-top: 0;
 }
 
+/*     VIDEO REEL     */
+.video-reel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    border-bottom: 2px solid white;
+}
+
+.video-reel > iframe {
+    width: 860px; 
+    height: 515px;
+}
+
 /*     FOOTER     */
 .main-footer {
     padding: 2rem 2rem 4rem 2rem;
@@ -503,6 +517,17 @@ div > .welcome-text {
         font-size: 10px;
         text-align: center;
         overflow-wrap: break-word;
+    }
+    
+        /*     VIDEO REEL     */
+    .video-reel {
+        padding: 2rem 0;
+        border-bottom: 2px solid white;
+    }
+
+    .video-reel > iframe {
+        width: 330px;
+        height: 300px;
     }
     
     /*     FOOTER     */
