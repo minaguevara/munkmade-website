@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUNKMADE</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/megablok_web_icon.webp"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/work.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <a href="#" class="logo" aria-label="Munkmade Home">
+      <img class="logo-icon" src="assets/megablok_web_icon-08.webp" />
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#work">WORK</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div
+      class="mobile-nav"
+      id="mobileNav"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <a href="#home" class="mobile-link">HOME</a>
+      <a href="#about" class="mobile-link">ABOUT</a>
+      <a href="#work" class="mobile-link">WORK</a>
+      <a href="#contact" class="mobile-link">CONTACT</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+     HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero-image-wrapper" id="heroImageWrapper">
+        <img
+          class="hero-img render"
+          src="assets/megablok_web_header-11.webp"
+          alt="Max's 3D render"
+          style="display: none"
+        />
+
+        <img
+          class="hero-img rigging"
+          src="assets/megablok_web_header-10.webp"
+          alt="3D rigging wireframe"
+          style="display: none"
+        />
+
+        <div class="hero-placeholder" id="heroPlaceholder">
+          <p class="placeholder-label"></p>
+        </div>
+      </div>
+
+      <div class="hero-title" aria-label="Max — 3D Artist & Designer">
+        <div class="hero-title-name">MUNKMADE</div>
+        <div class="hero-title-sub">EST.93 · NJ &gt; MX &gt; GBL</div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+
+      <div class="hero-bottom">
+        <span class="hero-role">3D Artist</span>
+        <p class="hero-tagline">Built for Real-Time. Ready for Production.</p>
+        <span class="hero-role">"LET´S PLAY BLOCKS."</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+     ABOUT SECTION
+    ═══════════════════════════════════════════════════════ -->
+    <section class="about" id="about">
+      <!-- Scanline overlay (purely decorative) -->
+      <div class="about-scanlines" aria-hidden="true"></div>
+
+      <!-- ── TOP BAR ── -->
+      <div class="about-topbar">
+        <!-- Name -->
+        <div class="about-name-block">
+          <h2 class="about-name">MAXWELL</h2>
+          <span class="about-name-tag"
+            >// Available for Character/Product/Prop Design & 3D Artist Roles
+            (Remote / NY-NJ)</span
+          >
+        </div>
+
+        <div class="about-stats-row">
+          <div class="top-stat">
+            <div class="top-stat-icon ts-xp" aria-hidden="true">✦</div>
+            <div class="top-stat-info">
+              <span class="top-stat-label">Experience</span>
+              <span class="top-stat-value">6+ YRS</span>
+            </div>
+          </div>
+
+          <div class="top-stat">
+            <div class="top-stat-icon ts-trophy" aria-hidden="true">⬡</div>
+            <div class="top-stat-info">
+              <span class="top-stat-label">Projects</span>
+              <span class="top-stat-value">100+</span>
+            </div>
+          </div>
+
+          <div class="top-stat">
+            <div class="top-stat-icon ts-coffee" aria-hidden="true">🎮</div>
+            <div class="top-stat-info">
+              <span class="top-stat-label">Game Assets</span>
+              <span class="top-stat-value">
+                <span class="top-stat-value">30+</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="top-stat">
+            <div class="top-stat-icon ts-blender" aria-hidden="true">💻</div>
+            <div class="top-stat-info">
+              <span class="top-stat-label">Hrs in Blender</span>
+              <span class="top-stat-value">
+                <span class="top-stat-value">10,000+</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MAIN GRID ── -->
+      <div class="about-grid">
+        <!-- LEFT: Bio + Skill Bars -->
+        <div class="about-left">
+          <!-- Bio -->
+          <div class="about-bio-block">
+            <div class="block-label">// BIO</div>
+            <p class="about-bio">
+              Stylized 3D Artist focused on character and collectible design. I
+              build production-ready assets from concept to final, including
+              clean topology, UVs, and optimized materials for real-time and
+              physical production. My work centers on strong silhouettes,
+              simplified forms, and character-driven design. Currently focused
+              on game-ready characters and collectible-style assets for studios
+              and brands.
+              <br />
+              <a
+                class="cv-btn"
+                href="assets/Maxwell Carrier - 3D Designer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="cv-btn-text">VIEW RESUME</span>
+              </a>
+            </p>
+          </div>
+
+          <div class="about-skills-block">
+            <div class="block-label">// ABILITIES</div>
+
+            <div class="skill-row">
+              <div class="skill-icon sk-red" aria-hidden="true">▣</div>
+              <div class="skill-info">
+                <span class="skill-name">BLENDER</span>
+                <div class="skill-bar-track">
+                  <div
+                    class="skill-bar-fill"
+                    data-level="96"
+                    style="--bar-color: var(--red)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-icon sk-yellow" aria-hidden="true">▣</div>
+              <div class="skill-info">
+                <span class="skill-name">Substance 3D Painter</span>
+                <div class="skill-bar-track">
+                  <div
+                    class="skill-bar-fill"
+                    data-level="85"
+                    style="--bar-color: var(--yellow)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-icon sk-blue" aria-hidden="true">▣</div>
+              <div class="skill-info">
+                <span class="skill-name">Illustrator & Photoshop</span>
+                <div class="skill-bar-track">
+                  <div
+                    class="skill-bar-fill"
+                    data-level="70"
+                    style="--bar-color: var(--blue)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-icon sk-green" aria-hidden="true">▣</div>
+              <div class="skill-info">
+                <span class="skill-name">After Effects & Davinci Resolve</span>
+                <div class="skill-bar-track">
+                  <div
+                    class="skill-bar-fill"
+                    data-level="60"
+                    style="--bar-color: var(--green)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER: Character Image -->
+        <div class="about-center">
+          <div class="char-placeholder" id="charPlaceholder">
+            <div class="char-placeholder-inner">
+              <div class="char-block-stack" aria-hidden="true">
+                <div class="cbs-row">
+                  <span style="background: var(--red)"></span>
+                  <span style="background: var(--yellow)"></span>
+                </div>
+                <div class="cbs-row">
+                  <span style="background: var(--blue)"></span>
+                  <span style="background: var(--green)"></span>
+                </div>
+              </div>
+              <p class="char-placeholder-label"></p>
+            </div>
+          </div>
+          <img
+            class="about-char-img"
+            src="assets/web_herocharacter_MFR.webp"
+            alt="Max — 3D character render"
+            id="charImg"
+          />
+
+          <!-- Glow behind character -->
+          <div class="char-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- RIGHT: Progress / Software Levels + Circles -->
+        <div class="about-right">
+          <div class="block-label">// SKILL SET</div>
+
+          <div class="progress-list">
+            <div class="progress-row">
+              <span class="prog-name">MODELING</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-red" data-lvl="20"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="20">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">TEXTURING</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-yellow" data-lvl="13"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="13">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">RIGGING</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-blue" data-lvl="10"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="10">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">ANIMATION</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-green" data-lvl="13"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="13">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">REAL-TIME OPTIMIZATION</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-red" data-lvl="14"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="14">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">TOPOLOGY & RETOPO</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-yellow" data-lvl="12"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="12">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">GRAPHIC DESIGN</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-blue" data-lvl="12"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="12">0</span></span
+              >
+            </div>
+
+            <div class="progress-row">
+              <span class="prog-name">ART DIRECTION</span>
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill prog-green" data-lvl="14"></div>
+              </div>
+              <span class="prog-lvl"
+                >LVL <span class="prog-lvl-num" data-target="14">0</span></span
+              >
+            </div>
+          </div>
+
+          <div class="about-bottom-circles">
+            <!-- Circle 1 -->
+            <div class="stat-circle">
+              <svg class="circle-svg" viewBox="0 0 90 90" aria-hidden="true">
+                <circle class="circle-bg" cx="45" cy="45" r="38" />
+                <circle
+                  class="circle-progress cp-red"
+                  cx="45"
+                  cy="45"
+                  r="38"
+                  data-pct="100"
+                  stroke-dasharray="238.8"
+                  stroke-dashoffset="238.8"
+                />
+              </svg>
+              <div class="circle-inner">
+                <span class="circle-icon">⬡</span>
+                <span class="circle-label">Production-Ready<br />Assets</span>
+                <span class="circle-pct"
+                  ><span class="circle-pct-num" data-target="100">0</span
+                  >%</span
+                >
+              </div>
+            </div>
+
+            <!-- Circle 2 -->
+            <div class="stat-circle">
+              <svg class="circle-svg" viewBox="0 0 90 90" aria-hidden="true">
+                <circle class="circle-bg" cx="45" cy="45" r="38" />
+                <circle
+                  class="circle-progress cp-yellow"
+                  cx="45"
+                  cy="45"
+                  r="38"
+                  data-pct="98"
+                  stroke-dasharray="238.8"
+                  stroke-dashoffset="238.8"
+                />
+              </svg>
+              <div class="circle-inner">
+                <span class="circle-icon">✦</span>
+                <span class="circle-label">On-Time<br />Delivery</span>
+                <span class="circle-pct"
+                  ><span class="circle-pct-num" data-target="98">0</span>%</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /about -->
+
+    <!-- ═══════════════════════════════════════════════════════
+     WORK SECTION
+    ═══════════════════════════════════════════════════════ -->
+    <section class="work" id="work">
+      <div class="work-scanlines" aria-hidden="true"></div>
+
+      <!-- ── HEADER ── -->
+      <div class="work-header">
+        <div class="work-header-left">
+          <span class="work-section-tag">// PORTFOLIO</span>
+          <h2 class="work-title">SELECTED<br />WORK</h2>
+        </div>
+        <div class="work-header-right">
+          <p class="work-subtitle">
+            A curated selection of stylized characters, collectibles, and
+            real-time assets.<br />
+            Click any project to view the full breakdown on ArtStation.
+          </p>
+          <!-- <div class="work-count">
+            <span class="work-count-num">06</span>
+            <span class="work-count-label">Projects</span>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- ── PROJECT GRID ── -->
+      <!--
+        📌 HOW TO CUSTOMIZE EACH PROJECT CARD:
+
+        1. data-index="01"       → display number (update as you add more)
+        2. href="https://..."    → your ArtStation project URL
+        3. data-tag="..."        → category label (e.g. "CHARACTER", "ENVIRONMENT")
+        4. data-year="..."       → year of the project
+        5. <img src="...">       → project thumbnail image
+          alt="..."             → project name (also used for the title overlay)
+        6. <span class="proj-name"> → project name shown in the card
+
+        TO ADD MORE PROJECTS:
+        Copy any .proj-card block, paste it inside .work-grid,
+        and update the fields above. The grid auto-adjusts.
+      -->
+      <div class="work-grid">
+        <!-- Project 1 — LARGE (spans 2 cols) -->
+        <a
+          class="proj-card"
+          href="https://www.artstation.com/artwork/ZlwyyN"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-index="01"
+          data-tag="CHARACTER"
+          data-year="2024"
+        >
+          <div class="proj-img-wrap">
+            <img
+              class="proj-img"
+              src="assets/megablok_web_thumbnail_1.webp"
+              alt="Project One"
+            />
+            <div class="proj-placeholder" aria-hidden="true">
+              <span class="proj-ph-num">01</span>
+            </div>
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-meta">
+              <span class="proj-tag">STYLIZED CHARACTERS</span>
+              <span class="proj-year">2025</span>
+            </div>
+            <div class="proj-bottom">
+              <span class="proj-index">01</span>
+              <span class="proj-name">Project One</span>
+              <span class="proj-arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a
+          class="proj-card proj-large"
+          href="https://www.artstation.com/artwork/RKvGyO"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-index="02"
+          data-tag="ENVIRONMENT"
+          data-year="2024"
+        >
+          <div class="proj-img-wrap">
+            <img
+              class="proj-img"
+              src="assets/megablok_web_thumbnail_2.webp"
+              alt="Project Two"
+            />
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-meta">
+              <span class="proj-tag">COLLECTIBLE PRODUCT DESIGN</span>
+              <span class="proj-year">2022-26</span>
+            </div>
+            <div class="proj-bottom">
+              <span class="proj-index">02</span>
+              <span class="proj-name">Project Two</span>
+              <span class="proj-arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a
+          class="proj-card proj-large"
+          href="https://www.artstation.com/artwork/mABeP9"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-index="03"
+          data-tag="MOTION"
+          data-year="2023"
+        >
+          <div class="proj-img-wrap">
+            <img
+              class="proj-img"
+              src="assets/megablok_web_thumbnail_3.webp"
+              alt="Project Three"
+            />
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-meta">
+              <span class="proj-tag">MUSIC VIDEO & ENVIRONMENT</span>
+              <span class="proj-year">2026</span>
+            </div>
+            <div class="proj-bottom">
+              <span class="proj-index">03</span>
+              <span class="proj-name">Project Three</span>
+              <span class="proj-arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a
+          class="proj-card"
+          href="https://www.artstation.com/artwork/a0n6yk"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-index="04"
+          data-tag="CHARACTER"
+          data-year="2023"
+        >
+          <div class="proj-img-wrap">
+            <img
+              class="proj-img"
+              src="assets/megablok_web_thumbnail_4.webp"
+              alt="Project Four"
+            />
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-meta">
+              <span class="proj-tag">HERO CHARACTER</span>
+              <span class="proj-year">2026</span>
+            </div>
+            <div class="proj-bottom">
+              <span class="proj-index">04</span>
+              <span class="proj-name">Project Four</span>
+              <span class="proj-arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 5 -->
+        <a
+          class="proj-card"
+          href="https://www.artstation.com/artwork/x3GV1Y"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-index="05"
+          data-tag="VFX"
+          data-year="2023"
+        >
+          <div class="proj-img-wrap">
+            <img
+              class="proj-img"
+              src="assets/megablok_web_thumbnail_5.webp"
+              alt="Project Five"
+            />
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-meta">
+              <span class="proj-tag">3D TO PHYSICAL FOOTWEAR</span>
+              <span class="proj-year">2025</span>
+            </div>
+            <div class="proj-bottom">
+              <span class="proj-index">05</span>
+              <span class="proj-name">Project Five</span>
+              <span class="proj-arrow">↗</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a
+          class="proj-card proj-large"
+          href="https://www.artstation.com/artwork/XJZY5w"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-index="06"
+          data-tag="RIGGING"
+          data-year="2022"
+        >
+          <div class="proj-img-wrap">
+            <img
+              class="proj-img"
+              src="assets/megablok_web_thumbnail_6.webp"
+              alt="Project Six"
+            />
+          </div>
+          <div class="proj-overlay">
+            <div class="proj-meta">
+              <span class="proj-tag">MUSIC VIDEO & ANIMATION</span>
+              <span class="proj-year">2023</span>
+            </div>
+            <div class="proj-bottom">
+              <span class="proj-index">06</span>
+              <span class="proj-name">Project Six</span>
+              <span class="proj-arrow">↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- /work-grid -->
+
+      <!-- ── FOOTER LINE ── -->
+      <div class="work-footer">
+        <span class="work-footer-label">// MORE ON ARTSTATION</span>
+        <a
+          class="work-artstation-link"
+          href="https://www.artstation.com/munkmade"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Profile
+        </a>
+      </div>
+    </section>
+    <!-- /work -->
+
+    <!-- ═══════════════════════════════════════════════════════
+     CONTACT SECTION
+    ═══════════════════════════════════════════════════════ -->
+    <section class="contact" id="contact">
+      <div class="contact-scanlines" aria-hidden="true"></div>
+
+      <!-- Ambient glow blobs -->
+      <div class="contact-glow contact-glow-red" aria-hidden="true"></div>
+      <div class="contact-glow contact-glow-blue" aria-hidden="true"></div>
+
+      <!-- ── INNER WRAPPER ── -->
+      <div class="contact-inner">
+        <!-- Tag -->
+        <span class="contact-tag">// GET IN TOUCH</span>
+
+        <h2 class="contact-headline">
+          <span class="ch-line ch-line-1">LET'S BUILD</span>
+          <span class="ch-line ch-line-2">SOMETHING</span>
+          <span class="ch-line ch-line-3">REAL.</span>
+        </h2>
+
+        <p class="contact-sub">
+          Characters, collectibles. Animated or game-ready.
+          <br />Let´s bring your idea to life. <br /><br />Open to studio roles,
+          freelance projects, and collaborations.
+        </p>
+
+        <!-- CTA Button -->
+        <a
+          class="contact-cta"
+          href="mailto:munk@munkmade.net?subject=Let's%20Work%20Together"
+          aria-label="Send an email to Max"
+          target="_blank"
+        >
+          <span class="contact-cta-text">GET IN TOUCH</span>
+          <span class="contact-cta-icon" aria-hidden="true">↗</span>
+        </a>
+
+        <!-- Divider -->
+        <div class="contact-divider" aria-hidden="true">
+          <span class="cd-line"></span>
+          <span class="cd-label">FIND ME ON</span>
+          <span class="cd-line"></span>
+        </div>
+
+        <!-- Social Links -->
+        <div class="contact-socials">
+          <!-- Instagram -->
+          <a
+            class="social-pill social-ig"
+            href="https://www.instagram.com/munkmade"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            class="social-pill social-fb"
+            href="https://www.facebook.com/munkmade"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+
+          <!-- Whatsapp -->
+          <a
+            class="social-pill social-wa"
+            href="https://wa.me/16098791251"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.57a.75.75 0 0 0 .928.928l5.733-1.476A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.953-1.355l-.355-.21-3.674.946.97-3.598-.232-.37A9.713 9.713 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"
+              />
+            </svg>
+          </a>
+
+          <!-- ArtStation -->
+          <a
+            class="social-pill social-as"
+            href="https://www.artstation.com/munkmade"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ArtStation"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.164-1.333H9.839l9.61 16.652 2.545 4.429A2.421 2.421 0 0 0 24 17.748zm-11.99-3.78l-4.058-7.026-4.06 7.026h8.118z"
+              />
+            </svg>
+          </a>
+        </div>
+        <!-- /contact-socials -->
+      </div>
+      <!-- /contact-inner -->
+
+      <!-- ── FOOTER ── -->
+      <footer class="contact-footer">
+        <div class="cf-left">
+          <div class="logo-icon-fallback cf-logo" aria-hidden="true">
+            <span style="background: var(--red)"></span>
+            <span style="background: var(--yellow)"></span>
+            <span style="background: var(--blue)"></span>
+            <span style="background: var(--green)"></span>
+          </div>
+          <span class="cf-wordmark">MUNKMADE<sup>®</sup></span>
+        </div>
+        <span class="cf-copy"
+          >© <span id="contactYear"></span> — EST. 93 · NJ › MX › GBL</span
+        >
+        <a class="cf-back-top" href="#home" aria-label="Back to top"> ↑ TOP </a>
+      </footer>
+    </section>
+    <!-- /contact -->
+
+    <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/work.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
