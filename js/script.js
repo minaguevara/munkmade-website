@@ -250,11 +250,16 @@ if (heroWrapper) {
   heroWrapper.addEventListener(
     "touchstart",
     (e) => {
+      const rect  = heroWrapper.getBoundingClientRect();
+      const touchY = e.touches[0].clientY;
+
+      // Only activate if tapping within the image area (top 70%)
+      if (touchY > rect.top + rect.height * 0.70) return;
+
       e.preventDefault();
       touchActive = !touchActive;
       heroWrapper.classList.toggle("touched", touchActive);
 
-      // On untap, make sure rigging clip-path is cleared
       if (!touchActive && riggingImg) {
         riggingImg.style.clipPath       = '';
         riggingImg.style.webkitClipPath = '';
