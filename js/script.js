@@ -242,7 +242,7 @@ function updateFlashlight(e) {
 }
 
 /* ─────────────────────────────────────────
-   MOBILE TOUCH — tap to reveal rigging
+   MOBILE TOUCH — tap to swap images
 ───────────────────────────────────────── */
 let touchActive = false;
 
@@ -253,8 +253,14 @@ if (heroWrapper) {
       e.preventDefault();
       touchActive = !touchActive;
       heroWrapper.classList.toggle("touched", touchActive);
+
+      // On untap, make sure rigging clip-path is cleared
+      if (!touchActive && riggingImg) {
+        riggingImg.style.clipPath       = '';
+        riggingImg.style.webkitClipPath = '';
+      }
     },
-    { passive: false },
+    { passive: false }
   );
 }
 
