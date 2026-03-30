@@ -1,0 +1,607 @@
+:root {
+  --cream: #f0eedb;
+  --black: #111111;
+  --red: #e8291c;
+  --yellow: #f5c800;
+  --blue: #3a8fd4;
+  --green: #4db048;
+  --white: #ffffff;
+
+  --nav-bg: #1a1a1a;
+  --nav-text: #f0eedb;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Space Mono", monospace;
+  --font-ui: "Barlow Condensed", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 76px;
+  background-color: var(--cream);
+  z-index: 99;
+  box-shadow: 0 1px 0 rgba(17, 17, 17, 0.08);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cream);
+  color: var(--black);
+  font-family: var(--font-ui);
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth; /* native smooth scroll as backup */
+}
+
+body {
+  overflow-x: hidden; /* only on body, not html */
+}
+
+/* ─────────────────────────────────────────
+   CUSTOM CURSOR — adaptive inverted ring
+   mix-blend-mode: difference keeps it
+   visible on both cream and dark sections
+───────────────────────────────────────── */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--cream);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s ease,
+    height 0.2s ease;
+  mix-blend-mode: difference;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    opacity 0.25s ease;
+}
+
+.cursor.hovering {
+  width: 44px;
+  height: 44px;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--cream);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    opacity 0.2s ease;
+  mix-blend-mode: difference;
+  opacity: 0.7;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    opacity 0.25s ease;
+}
+
+.cursor-ring.hovering {
+  width: 60px;
+  height: 60px;
+  opacity: 0.4;
+}
+
+/* Logo */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 10px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo-icon {
+  width: 120px;
+  object-fit: contain;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  right: 24px;
+  height: 76px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav a {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--nav-text);
+  background-color: var(--nav-bg);
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--black);
+  color: var(--yellow);
+  transform: translateY(-2px);
+}
+
+/* Mobile Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: none;
+  background: var(--nav-bg);
+  border: none;
+  padding: 12px 14px;
+  border-radius: 100px;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--cream);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background-color: var(--black);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.mobile-nav.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav a {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 12vw, 80px);
+  letter-spacing: 0.04em;
+  color: var(--cream);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav a:nth-child(1):hover {
+  color: var(--red);
+}
+.mobile-nav a:nth-child(2):hover {
+  color: var(--yellow);
+}
+.mobile-nav a:nth-child(3):hover {
+  color: var(--blue);
+}
+.mobile-nav a:nth-child(4):hover {
+  color: var(--green);
+}
+
+/* ─────────────────────────────────────────
+   HERO SECTION
+───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--cream);
+}
+
+.hero-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Render sits on top — flashlight mask is applied via JS */
+.hero-img.render {
+  z-index: 1;
+  /* mask transitions smoothly 
+  transition:
+    mask-image 0.05s ease,
+    -webkit-mask-image 0.05s ease;*/
+}
+
+/* Rigging sits underneath, always visible through the mask hole */
+.hero-img.rigging {
+  z-index: 1;
+  opacity: 1;
+}
+
+/* Remove the old full-hover swap — flashlight handles it now */
+/* Keep touch toggle for mobile */
+.hero-image-wrapper.touched .hero-img.render {
+  opacity: 0;
+}
+
+.hover-label {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(14px, 2vw, 22px);
+  letter-spacing: 0.2em;
+  color: var(--white);
+  background-color: rgba(17, 17, 17, 0.7);
+  padding: 10px 24px;
+  border-radius: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+/* Show hint label only on touch */
+.hero-image-wrapper.touched .hover-label {
+  opacity: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+/* Bottom Bar */
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-top: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.hero-role {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: clamp(10px, 1.2vw, 13px);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.hero-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(9px, 1vw, 11px);
+  line-height: 1.6;
+  color: var(--black);
+  text-align: center;
+  max-width: 360px;
+}
+
+/* Big Title */
+.hero-title {
+  position: absolute;
+  bottom: 80px;
+  left: 28px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.hero-title-name {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 140px);
+  line-height: 0.9;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
+
+.hero-title-sub {
+  font-family: var(--font-body);
+  font-size: clamp(10px, 1.1vw, 13px);
+  letter-spacing: 0.18em;
+  color: var(--black);
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 90px;
+  right: 28px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+}
+
+.scroll-indicator span {
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: var(--black);
+  transform-origin: top;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Page Load Animations */
+.logo,
+nav,
+.hero-title,
+.hero-bottom,
+.scroll-indicator {
+  animation: fadeUp 0.8s ease both;
+}
+
+.logo {
+  animation-delay: 0.1s;
+}
+nav {
+  animation-delay: 0.2s;
+}
+.hero-image-wrapper {
+  animation: fadeIn 1s ease 0.4s both;
+}
+.hero-title {
+  animation-delay: 0.5s;
+}
+.hero-bottom {
+  animation-delay: 0.6s;
+}
+.scroll-indicator {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Placeholder Visual */
+.hero-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.placeholder-blocks {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.placeholder-block {
+  border-radius: 6px;
+  position: relative;
+}
+
+.placeholder-block::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 4px;
+  right: -4px;
+  height: 10px;
+  border-radius: 4px;
+  background: inherit;
+  filter: brightness(0.7);
+}
+
+.pb-red {
+  background: var(--red);
+  width: 80px;
+  height: 50px;
+}
+.pb-yellow {
+  background: var(--yellow);
+  width: 44px;
+  height: 44px;
+}
+.pb-blue {
+  background: var(--blue);
+  width: 44px;
+  height: 60px;
+}
+.pb-green {
+  background: var(--green);
+  width: 36px;
+  height: 36px;
+}
+
+.placeholder-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — MOBILE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    height: 40px;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--nav-bg);
+    padding: 10px 15px;
+  }
+
+  /* re-show the pill background on the inner button */
+  .hamburger::after {
+    display: none;
+  }
+
+  .logo {
+    top: 0;
+    left: 16px;
+    height: 76px;
+  }
+
+  .hero-title {
+    bottom: 120px;
+    left: 16px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .hero-tagline {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .scroll-indicator {
+    bottom: auto;
+    top: 50%;
+    right: 12px;
+  }
+
+  .placeholder-blocks {
+    transform: scale(0.75);
+  }
+
+  /* Hide custom cursor on touch devices */
+  .cursor,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-name {
+    font-size: 52px;
+  }
+}
